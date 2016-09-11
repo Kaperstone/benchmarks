@@ -19,28 +19,44 @@ Speedtest (IPv4 only)
 ---------------------
 Your public IPv4 is 91.121.31.105
 
+Cachefly CDN
 Location		Provider	Speed
 CDN			Cachefly	11.3MB/s
 
-Atlanta, GA, US		Coloat		2.95MB/s 
-Dallas, TX, US		Softlayer	9.02MB/s 
-Seattle, WA, US		Softlayer	8.37MB/s 
-San Jose, CA, US	Softlayer	8.46MB/s 
+United States
+Atlanta, GA, US		Coloat		2.88MB/s 
+Dallas, TX, US		Softlayer	9.17MB/s 
+Seattle, WA, US		Softlayer	7.95MB/s 
+San Jose, CA, US	Softlayer	7.55MB/s 
 Washington, DC, US	Softlayer 	10.4MB/s 
 
-Tokyo, Japan		Linode		3.78MB/s 
-Singapore 		Softlayer	3.98MB/s 
+Asia
+Tokyo, Japan		Linode		4.42MB/s 
+Tokyo, Japan		Vultr		2.24MB/s 
+Singapore 		Softlayer	4.83MB/s 
 
+Europe
 Rotterdam, Netherlands	id3.net		11.2MB/s
 Haarlem, Netherlands	Leaseweb	11.2MB/s 
+Amsterdam, Netherlands	DigitalOcean	11.0MB/s 
+London, England		DigitalOcean	11.0MB/s 
+Frankfurt, Germany	DigitalOcean	11.0MB/s 
+Maidenhead, UK		VPSDime		11.2MB/s 
+Paris, France		Vultr		10.8MB/s 
+Frankfurt, Germany	Vultr		10.9MB/s 
+London, England		Vultr		11.2MB/s 
+Amsterdam, Netherlands	Vultr		10.8MB/s 
+
+Australia
+Sydney, Australia	Vultr	4.62MB/s 
 
 
 Disk Speed
 ----------
-I/O (1st run)	: 150 MB/s
-I/O (2nd run)	: 150 MB/s
-I/O (3rd run)	: 151 MB/s
-Average I/O	: 150.333 MB/s
+I/O (1st run)	: 148 MB/s
+I/O (2nd run)	: 149 MB/s
+I/O (3rd run)	: 149 MB/s
+Average I/O	: 148.667 MB/s
 ```
 
 Rest of the UnixBench output
