@@ -33,19 +33,19 @@ Washington, DC, US	Softlayer 	10.4MB/s
 Asia
 Tokyo, Japan		Linode		4.42MB/s 
 Tokyo, Japan		Vultr		2.24MB/s 
-Singapore 		Softlayer	4.83MB/s 
+Singapore 			Softlayer   4.83MB/s 
 
 Europe
-Rotterdam, Netherlands	id3.net		11.2MB/s
-Haarlem, Netherlands	Leaseweb	11.2MB/s 
+Rotterdam, Netherlands	id3.net			11.2MB/s
+Haarlem, Netherlands	Leaseweb		11.2MB/s 
 Amsterdam, Netherlands	DigitalOcean	11.0MB/s 
-London, England		DigitalOcean	11.0MB/s 
-Frankfurt, Germany	DigitalOcean	11.0MB/s 
-Maidenhead, UK		VPSDime		11.2MB/s 
-Paris, France		Vultr		10.8MB/s 
-Frankfurt, Germany	Vultr		10.9MB/s 
-London, England		Vultr		11.2MB/s 
-Amsterdam, Netherlands	Vultr		10.8MB/s 
+London, England		    DigitalOcean	11.0MB/s 
+Frankfurt, Germany	    DigitalOcean	11.0MB/s 
+Maidenhead, UK		    VPSDime			11.2MB/s 
+Paris, France		    Vultr			10.8MB/s 
+Frankfurt, Germany	    Vultr			10.9MB/s 
+London, England		    Vultr			11.2MB/s 
+Amsterdam, Netherlands	Vultr			10.8MB/s 
 
 Australia
 Sydney, Australia	Vultr	4.62MB/s 
