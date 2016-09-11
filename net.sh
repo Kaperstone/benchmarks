@@ -11,7 +11,7 @@
 #####################################################################
 # The speed test was added by dmmcintyre3 from FreeVPS.us as a      #
 # modification to the original script.                              #
-# Modded Script: https://freevps.us/thread-2252.html                # 
+# Modded Script: https://freevps.us/thread-2252.html                #
 # Copyright (C) 2011 by dmmcintyre3 for the modification            #
 #####################################################################
 sysinfo () {
@@ -85,6 +85,8 @@ speedtest4 () {
 	# Asia speed test
 	linodejp=$( wget -4 -O /dev/null http://speedtest.tokyo.linode.com/100MB-tokyo.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 	echo "Tokyo, Japan		Linode		$linodejp " | tee -a $HOME/bench.log
+	vl_jp=$( wget -4 -O /dev/null https://hnd-jp-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Tokyo, Japan		Vultr		$vl_jp " | tee -a $HOME/bench.log
 	slsg=$( wget -4 -O /dev/null http://speedtest.sng01.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 	echo "Singapore 		Softlayer	$slsg " | tee -a $HOME/bench.log
 	echo "" | tee -a $HOME/bench.log
@@ -93,6 +95,29 @@ speedtest4 () {
 	echo "Rotterdam, Netherlands	id3.net		$i3d" | tee -a $HOME/bench.log
 	leaseweb=$( wget -4 -O /dev/null http://mirror.leaseweb.com/speedtest/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 	echo "Haarlem, Netherlands	Leaseweb	$leaseweb " | tee -a $HOME/bench.log
+	do_ams2=$( wget -4 -O /dev/null http://speedtest-ams2.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Amsterdam, Netherlands	DigitalOcean	$do_ams2 " | tee -a $HOME/bench.log
+	do_lon=$( wget -4 -O /dev/null http://speedtest-lon1.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "London, England	DigitalOcean	$do_ams2 " | tee -a $HOME/bench.log
+	do_fra=$( wget -4 -O /dev/null http://speedtest-fra1.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Frankfurt, Germany	DigitalOcean	$do_ams2 " | tee -a $HOME/bench.log
+	dime=$( wget -4 -O /dev/null http://192.121.166.10/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Maidenhead, UK	VPSDime	$dime " | tee -a $HOME/bench.log
+	ms=$( wget -4 -O /dev/null http://192.121.166.10/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Maidenhead, UK	VPSDime	$ms " | tee -a $HOME/bench.log
+	vl_fr=$( wget -4 -O /dev/null https://par-fr-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Paris, France	Vultr	$vl_fr " | tee -a $HOME/bench.log
+	vl_de=$( wget -4 -O /dev/null https://fra-de-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Frankfurt, Germany	Vultr	$vl_de " | tee -a $HOME/bench.log
+	vl_gb=$( wget -4 -O /dev/null https://lon-gb-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "London, England	Vultr	$vl_gb " | tee -a $HOME/bench.log
+	vl_nl=$( wget -4 -O /dev/null https://ams-nl-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Amsterdam, Netherlands	Vultr	$vl_nl " | tee -a $HOME/bench.log
+
+	# Australia
+	vl_au=$( wget -4 -O /dev/null https://syd-au-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Sydney, Australia	Vultr	$vl_au " | tee -a $HOME/bench.log
+
 	echo "" | tee -a $HOME/bench.log
 	echo "" | tee -a $HOME/bench.log
 }
@@ -165,7 +190,7 @@ gbench () {
         gb_dl=$(wget -qO - $gb_page | \
                  sed -n 's/.*\(https\?:[^:]*\.tar\.gz\).*/\1/p')
         gb_noext=${gb_dl##*/}
-        gb_noext=${gb_noext%.tar.gz} 
+        gb_noext=${gb_noext%.tar.gz}
         gb_name=${gb_noext//-/ }
 	echo "File is located at $gb_dl" | tee -a $HOME/bench.log
 	echo "Downloading and extracting $gb_name" | tee -a $HOME/bench.log
