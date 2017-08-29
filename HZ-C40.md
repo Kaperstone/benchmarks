@@ -1,4 +1,5 @@
-``Benchmark started on Wed Aug 30 01:22:31 CEST 2017
+```
+Benchmark started on Wed Aug 30 01:22:31 CEST 2017
 Full benchmark log: /root/bench.log
 
 System Info
@@ -57,4 +58,5 @@ Disk Speed
 I/O (1st run)   : 50.4 MB/s
 I/O (2nd run)   : 466 MB/s
 I/O (3rd run)   : 453 MB/s
-Average I/O     : 323.133 MB/s``
+Average I/O     : 323.133 MB/s
+```
