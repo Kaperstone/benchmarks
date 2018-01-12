@@ -103,6 +103,16 @@ speedtest4 () {
 	echo "Frankfurt, Germany	DigitalOcean	$do_ams2 " | tee -a $HOME/bench.log
 	#dime=$( wget -4 -O /dev/null http://192.121.166.10/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 	#echo "Maidenhead, UK		VPSDime		$dime " | tee -a $HOME/bench.log
+	
+	do_fra=$( wget -4 -O /dev/null http://bks-speedtest-1.tele2.net/100MB.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Riga, Latvia	Tele2	$do_ams2 " | tee -a $HOME/bench.log
+	do_fra=$( wget -4 -O /dev/null http://zgb-speedtest-1.tele2.net/100MB.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Zagreb, Croatia	Tele2	$do_ams2 " | tee -a $HOME/bench.log
+	do_fra=$( wget -4 -O /dev/null http://fra36-speedtest-1.tele2.net/ 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Frankfurt, Germany	Tele2	$do_ams2 " | tee -a $HOME/bench.log
+	do_fra=$( wget -4 -O /dev/null http://vln038-speedtest-1.tele2.net/100MB.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Vilnius, Lithuania	Tele2	$do_ams2 " | tee -a $HOME/bench.log
+	
 	vl_fr=$( wget -4 -O /dev/null https://par-fr-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 	echo "Paris, France		Vultr		$vl_fr " | tee -a $HOME/bench.log
 	vl_de=$( wget -4 -O /dev/null https://fra-de-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
