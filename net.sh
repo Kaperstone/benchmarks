@@ -67,69 +67,72 @@ speedtest4 () {
 	echo "" | tee -a $HOME/bench.log
 	echo "Cachefly CDN"
 	echo "Location		Provider	Speed"	| tee -a $HOME/bench.log
-	cachefly=$( wget -4 -O /dev/null http://cachefly.cachefly.net/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "CDN			Cachefly	$cachefly" | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://cachefly.cachefly.net/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "CDN			Cachefly	$speed" | tee -a $HOME/bench.log
 	echo "" | tee -a $HOME/bench.log
 	echo "United States"
-	coloatatl=$( wget -4 -O /dev/null http://speed.atl.coloat.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Atlanta, GA, US		Coloat		$coloatatl " | tee -a $HOME/bench.log
-	sldltx=$( wget -4 -O /dev/null http://speedtest.dal05.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Dallas, TX, US		Softlayer	$sldltx " | tee -a $HOME/bench.log
-	slwa=$( wget -4 -O /dev/null http://speedtest.sea01.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Seattle, WA, US		Softlayer	$slwa " | tee -a $HOME/bench.log
-	slsjc=$( wget -4 -O /dev/null http://speedtest.sjc01.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "San Jose, CA, US	Softlayer	$slsjc " | tee -a $HOME/bench.log
-	slwdc=$( wget -4 -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Washington, DC, US	Softlayer 	$slwdc " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speed.atl.coloat.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Atlanta, GA, US		Coloat		$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speedtest.dal05.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Dallas, TX, US		Softlayer	$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speedtest.sea01.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Seattle, WA, US		Softlayer	$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speedtest.sjc01.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "San Jose, CA, US	Softlayer	$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Washington, DC, US	Softlayer 	$speed " | tee -a $HOME/bench.log
 	echo "" | tee -a $HOME/bench.log
 	echo "Asia"
-	linodejp=$( wget -4 -O /dev/null http://speedtest.tokyo.linode.com/100MB-tokyo.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Tokyo, Japan		Linode		$linodejp " | tee -a $HOME/bench.log
-	vl_jp=$( wget -4 -O /dev/null https://hnd-jp-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Tokyo, Japan		Vultr		$vl_jp " | tee -a $HOME/bench.log
-	slsg=$( wget -4 -O /dev/null http://speedtest.sng01.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Singapore 		Softlayer	$slsg " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speedtest.tokyo.linode.com/100MB-tokyo.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Tokyo, Japan		Linode		$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null https://hnd-jp-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Tokyo, Japan		Vultr		$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speedtest.sng01.softlayer.com/downloads/test100.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Singapore 		Softlayer	$speed " | tee -a $HOME/bench.log
 	echo "" | tee -a $HOME/bench.log
 	echo "Europe"
-	i3d=$( wget -4 -O /dev/null http://mirror.i3d.net/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Rotterdam, Netherlands	id3.net		$i3d" | tee -a $HOME/bench.log
-	leaseweb=$( wget -4 -O /dev/null http://mirror.leaseweb.com/speedtest/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Haarlem, Netherlands	Leaseweb	$leaseweb " | tee -a $HOME/bench.log
-	do_ams2=$( wget -4 -O /dev/null http://speedtest-ams2.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Amsterdam, Netherlands	DigitalOcean	$do_ams2 " | tee -a $HOME/bench.log
-	do_lon=$( wget -4 -O /dev/null http://speedtest-lon1.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "London, England		DigitalOcean	$do_ams2 " | tee -a $HOME/bench.log
-	do_fra=$( wget -4 -O /dev/null http://speedtest-fra1.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Frankfurt, Germany	DigitalOcean	$do_ams2 " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://mirror.i3d.net/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Rotterdam, Netherlands	id3.net		$speed" | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://mirror.leaseweb.com/speedtest/100mb.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Haarlem, Netherlands	Leaseweb	$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speedtest-ams2.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Amsterdam, Netherlands	DigitalOcean	$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speedtest-lon1.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "London, England		DigitalOcean	$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://speedtest-fra1.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Frankfurt, Germany	DigitalOcean	$speed " | tee -a $HOME/bench.log
 	#dime=$( wget -4 -O /dev/null http://192.121.166.10/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 	#echo "Maidenhead, UK		VPSDime		$dime " | tee -a $HOME/bench.log
 	
-	do_fra=$( wget -4 -O /dev/null http://bks-speedtest-1.tele2.net/100MB.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Riga, Latvia	Tele2	$do_ams2 " | tee -a $HOME/bench.log
-	do_fra=$( wget -4 -O /dev/null http://zgb-speedtest-1.tele2.net/100MB.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Zagreb, Croatia	Tele2	$do_ams2 " | tee -a $HOME/bench.log
-	do_fra=$( wget -4 -O /dev/null http://fra36-speedtest-1.tele2.net/ 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Frankfurt, Germany	Tele2	$do_ams2 " | tee -a $HOME/bench.log
-	do_fra=$( wget -4 -O /dev/null http://vln038-speedtest-1.tele2.net/100MB.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Vilnius, Lithuania	Tele2	$do_ams2 " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://bks-speedtest-1.tele2.net/100MB.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Riga, Latvia	Tele2	$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://zgb-speedtest-1.tele2.net/100MB.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Zagreb, Croatia	Tele2	$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://fra36-speedtest-1.tele2.net/ 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Frankfurt, Germany	Tele2	$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null http://vln038-speedtest-1.tele2.net/100MB.zip 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Vilnius, Lithuania	Tele2	$speed " | tee -a $HOME/bench.log
 	
-	vl_fr=$( wget -4 -O /dev/null https://par-fr-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Paris, France		Vultr		$vl_fr " | tee -a $HOME/bench.log
-	vl_de=$( wget -4 -O /dev/null https://fra-de-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Frankfurt, Germany	Vultr		$vl_de " | tee -a $HOME/bench.log
-	vl_gb=$( wget -4 -O /dev/null https://lon-gb-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "London, England		Vultr		$vl_gb " | tee -a $HOME/bench.log
-	vl_nl=$( wget -4 -O /dev/null https://ams-nl-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Amsterdam, Netherlands	Vultr		$vl_nl " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null https://par-fr-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Paris, France		Vultr		$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null https://fra-de-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Frankfurt, Germany	Vultr		$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null https://lon-gb-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "London, England		Vultr		$speed " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null https://ams-nl-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Amsterdam, Netherlands	Vultr		$speed " | tee -a $HOME/bench.log
 	echo "" | tee -a $HOME/bench.log
 	echo "Australia"
-	vl_au=$( wget -4 -O /dev/null https://syd-au-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Sydney, Australia	Vultr	$vl_au " | tee -a $HOME/bench.log
+	speed=$( wget -4 -O /dev/null https://syd-au-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	echo "Sydney, Australia	Vultr	$speed " | tee -a $HOME/bench.log
 
 	echo "" | tee -a $HOME/bench.log
 	echo "" | tee -a $HOME/bench.log
 }
 speedtest6 () {
+
+  ## not that I ever gonna test this;
+
 	ipvii=$( wget -qO- ipv6.icanhazip.com ) # Getting IPv6
   	# Speed test via wget for IPv6 only with 10x 100 MB files. 1 GB bandwidth will be used! No CDN - Cachefly not IPv6 ready...
   	echo "Speedtest (IPv6 only)" | tee -a $HOME/bench.log
