@@ -101,8 +101,8 @@ speedtest4 () {
 	echo "London, England		DigitalOcean	$do_ams2 " | tee -a $HOME/bench.log
 	do_fra=$( wget -4 -O /dev/null http://speedtest-fra1.digitalocean.com/100mb.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 	echo "Frankfurt, Germany	DigitalOcean	$do_ams2 " | tee -a $HOME/bench.log
-	dime=$( wget -4 -O /dev/null http://192.121.166.10/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
-	echo "Maidenhead, UK		VPSDime		$dime " | tee -a $HOME/bench.log
+	#dime=$( wget -4 -O /dev/null http://192.121.166.10/100MB.test 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
+	#echo "Maidenhead, UK		VPSDime		$dime " | tee -a $HOME/bench.log
 	vl_fr=$( wget -4 -O /dev/null https://par-fr-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
 	echo "Paris, France		Vultr		$vl_fr " | tee -a $HOME/bench.log
 	vl_de=$( wget -4 -O /dev/null https://fra-de-ping.vultr.com/vultr.com.100MB.bin 2>&1 | awk '/\/dev\/null/ {speed=$3 $4} END {gsub(/\(|\)/,"",speed); print speed}' )
