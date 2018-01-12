@@ -17,45 +17,50 @@ Download 100MB file:    |162MB/s
 ```
 Speedtest (IPv4 only)
 ---------------------
-Your public IPv4 is 
+Your public IPv4 is
 
 Cachefly CDN
 Location                Provider        Speed
-CDN                     Cachefly        155MB/s
+CDN                     Cachefly        169MB/s
 
 United States
-Atlanta, GA, US         Coloat          1.21MB/s
-Dallas, TX, US          Softlayer       13.4MB/s
-Seattle, WA, US         Softlayer       13.9MB/s
-San Jose, CA, US        Softlayer       13.4MB/s
-Washington, DC, US      Softlayer       23.1MB/s
+Atlanta, GA, US         Coloat          1.03MB/s
+Dallas, TX, US          Softlayer       17.1MB/s
+Seattle, WA, US         Softlayer       13.6MB/s
+San Jose, CA, US        Softlayer       12.8MB/s
+Washington, DC, US      Softlayer       11.4MB/s
 
 Asia
-Tokyo, Japan            Linode          9.09MB/s
-Tokyo, Japan            Vultr           8.49MB/s
-Singapore               Softlayer       11.2MB/s
+Tokyo, Japan            Linode          8.83MB/s
+Tokyo, Japan            Vultr           8.02MB/s
+Singapore               Softlayer       10.3MB/s
 
 Europe
-Rotterdam, Netherlands  id3.net         174MB/s
-Haarlem, Netherlands    Leaseweb        93.6MB/s
-Amsterdam, Netherlands  DigitalOcean    98.3MB/s
-London, England         DigitalOcean    98.3MB/s
-Frankfurt, Germany      DigitalOcean    98.3MB/s
-Paris, France           Vultr           153MB/s
-Frankfurt, Germany      Vultr           166MB/s
-London, England         Vultr           152MB/s
-Amsterdam, Netherlands  Vultr           173MB/s
+Rotterdam, Netherlands  id3.net         35.1MB/s
+Haarlem, Netherlands    Leaseweb        91.6MB/s
+Amsterdam, Netherlands  DigitalOcean    85.4MB/s
+London, England         DigitalOcean    189MB/s
+Frankfurt, Germany      DigitalOcean    211MB/s
+Riga, Latvia    Tele2   13.8MB/s
+Zagreb, Croatia Tele2   35.4MB/s
+Frankfurt, Germany      Tele2   527MB/s
+Vilnius, Lithuania      Tele2   22.3MB/s
+Paris, France           Vultr           143MB/s
+Frankfurt, Germany      Vultr           175MB/s
+London, England         Vultr           147MB/s
+Amsterdam, Netherlands  Vultr           153MB/s
 
 Australia
-Sydney, Australia       Vultr   7.64MB/s
+Sydney, Australia       Vultr   7.46MB/s
 
 
 Disk Speed
 ----------
-I/O (1st run)   : 1.0 GB/s
-I/O (2nd run)   : 949 MB/s
-I/O (3rd run)   : 992 MB/s
-Average I/O     : 647.333 MB/s
+I/O (1st run)   : 936 MB/s
+I/O (2nd run)   : 839 MB/s
+I/O (3rd run)   : 874 MB/s
+Average I/O     : 883 MB/s
+
 ```
 
 Rest of the UnixBench output
