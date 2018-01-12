@@ -41,10 +41,10 @@ Haarlem, Netherlands    Leaseweb        91.6MB/s
 Amsterdam, Netherlands  DigitalOcean    85.4MB/s
 London, England         DigitalOcean    189MB/s
 Frankfurt, Germany      DigitalOcean    211MB/s
-Riga, Latvia    Tele2   13.8MB/s
-Zagreb, Croatia Tele2   35.4MB/s
-Frankfurt, Germany      Tele2   527MB/s
-Vilnius, Lithuania      Tele2   22.3MB/s
+Riga, Latvia            Tele2           13.8MB/s
+Zagreb, Croatia         Tele2           35.4MB/s
+Frankfurt, Germany      Tele2           527MB/s
+Vilnius, Lithuania      Tele2           22.3MB/s
 Paris, France           Vultr           143MB/s
 Frankfurt, Germany      Vultr           175MB/s
 London, England         Vultr           147MB/s
